@@ -74,6 +74,10 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+"他のアプリでコピーした文字をVimで貼付けたい。またはその逆も
+set clipboard=unnamed,autoselect
+
+
 "不可視文字の設定"
 set list
 set listchars=tab:>.,trail:-,eol:↲,extends:>,precedes:<,nbsp:%
