@@ -22,7 +22,13 @@ Plug 'justinmk/vim-dirvish'
 Plug 'editorconfig/editorconfig-vim'
 "自動インポートとfmt"
 Plug 'mattn/vim-goimports'
+"GruvBox
+Plug 'morhetz/gruvbox'
 call plug#end()
+
+"gruvboxのコンフィグ
+set background=dark
+autocmd vimenter * colorscheme gruvbox
 
 "close tag補完に対応する拡張子"
 let g:closetag_filenames = '*.html,*.jsx,*.tsx'
@@ -74,10 +80,6 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-"他のアプリでコピーした文字をVimで貼付けたい。またはその逆も
-set clipboard=unnamed,autoselect
-
-
 "不可視文字の設定"
 set list
 set listchars=tab:>.,trail:-,eol:↲,extends:>,precedes:<,nbsp:%
@@ -97,7 +99,7 @@ set cursorline
 set cursorcolumn
 set visualbell
 set laststatus=2
-color panda
+"color molokai
 "ウィンドウサイズはマウスで調整する方が楽なので"
 set mouse=n
 
