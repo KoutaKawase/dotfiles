@@ -37,8 +37,31 @@ let g:indentLine_color_term = 65
 "Rust保存時自動整形
 let g:rustfmt_autosave = 1
 
-"let g:ale_sign_warning = '--'参考: https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txtのjumpCommand"
-nmap <silent> <F12> :call CocAction('jumpDefinition', 'split')<CR>
+"coc関係 begin"
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"exprで引数を式として扱いpubvisible(補完ウィンドウが出ているか)がtrueなら補完モード時の確定ctrl-yをCR(ENTER)に当て、
+"falseならアンドゥの単位がその時点で分割される要するに一度ノーマルモードに戻った
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+"Formatコマンドでフォーマットさせる
+command! -nargs=0 Format :call CocAction('format')
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+"coc関係 end"
 
 let mapleader = "\<Space>"
 "文字コードを明示的に指定"
