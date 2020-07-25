@@ -21,14 +21,25 @@ Plug 'justinmk/vim-dirvish'
 Plug 'editorconfig/editorconfig-vim'
 "自動インポートとfmt"
 Plug 'mattn/vim-goimports'
-"GruvBox
+"カラースキーム
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/forest-night'
 call plug#end()
 
-
+"カラースキーム関係
 "gruvboxのコンフィグ gruvbox使うときにコメントを外す
-set background=dark
-autocmd vimenter * colorscheme gruvbox
+"set background=dark
+"autocmd vimenter * colorscheme gruvbox
+
+"forest-night関係のコンフィグ
+set termguicolors
+
+let g:forest_night_enable_italic = 1
+let g:forest_night_disable_italic_comment = 1
+let g:forest_night_transparent_background = 1
+
+colorscheme forest-night
+"end forest-night config
 
 "close tag補完に対応する拡張子"
 let g:closetag_filenames = '*.html,*.jsx,*.tsx'
@@ -125,7 +136,6 @@ set cursorline
 set cursorcolumn
 set visualbell
 set laststatus=2
-"color iceberg
 "ウィンドウサイズはマウスで調整する方が楽なので"
 set mouse=n
 

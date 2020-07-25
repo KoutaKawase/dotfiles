@@ -6,7 +6,8 @@ alias vi 'vim'
 alias mk 'make'
 alias gcz 'git-cz'
 
-alias l 'ls'
+# lsの色を消すために上書きしている
+alias ls 'ls'
 alias ll 'ls -ltr'
 alias la 'ls -la'
 
