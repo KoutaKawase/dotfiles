@@ -2,7 +2,6 @@ call plug#begin()
 "行末スペースや全角を赤色にしてくれる"
 Plug 'bronson/vim-trailing-whitespace'
 "インデント可視化"
-" Plug 'yggdroot/indentline'
 Plug 'yggdroot/indentline'
 "ペア自動補完"
 Plug 'jiangmiao/auto-pairs'
@@ -26,7 +25,8 @@ Plug 'mattn/vim-goimports'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-"gruvboxのコンフィグ
+
+"gruvboxのコンフィグ gruvbox使うときにコメントを外す
 set background=dark
 autocmd vimenter * colorscheme gruvbox
 
@@ -112,6 +112,9 @@ nnoremap <Leader>w :w<CR> :FixWhitespace<CR>
 nnoremap <Leader>q :q<CR>
 "行末にセミコロンを挿入"
 nnoremap <Leader><ENTER> A;<ESC>
+"タブ切り替え
+nmap <Tab>      gt
+nmap <S-Tab>    gT
 
 syntax enable
 filetype plugin on
@@ -122,7 +125,7 @@ set cursorline
 set cursorcolumn
 set visualbell
 set laststatus=2
-"color molokai
+"color iceberg
 "ウィンドウサイズはマウスで調整する方が楽なので"
 set mouse=n
 
@@ -133,3 +136,10 @@ highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none
 
+"vert term ++closeのエイリアス
+"参考: https://qiita.com/shinshin86/items/6e6cbdb77cb59b87d21f
+command! -nargs=1 Vtc call CallTerm(<f-args>)
+
+function! CallTerm(cmd)
+    execute "vert term ++close ++cols=40 " . a:cmd
+endfunction
