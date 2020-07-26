@@ -21,6 +21,8 @@ Plug 'justinmk/vim-dirvish'
 Plug 'editorconfig/editorconfig-vim'
 "自動インポートとfmt"
 Plug 'mattn/vim-goimports'
+"Gitクライアント
+Plug 'tpope/vim-fugitive'
 "カラースキーム
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/forest-night'
@@ -132,8 +134,8 @@ filetype plugin on
 filetype indent on
 
 set number
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 set visualbell
 set laststatus=2
 "ウィンドウサイズはマウスで調整する方が楽なので"
