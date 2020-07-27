@@ -1,32 +1,37 @@
 call plug#begin()
-"行末スペースや全角を赤色にしてくれる"
+"行末スペースや全角を赤色にしてくれる
 Plug 'bronson/vim-trailing-whitespace'
-"インデント可視化"
+"インデント可視化
 Plug 'yggdroot/indentline'
-"ペア自動補完"
+"ペア自動補完
 Plug 'jiangmiao/auto-pairs'
-"Rust"
-Plug 'rust-lang/rust.vim'
-"close tag補完"
+"close tag補完
 Plug 'alvan/vim-closetag'
-"TypeScript""
+"TypeScript"
 Plug 'leafgarland/typescript-vim'
-"LSP"
+"LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"JS"
+"JS
 Plug 'pangloss/vim-javascript'
-"ファイラー"
+"ファイラー
 Plug 'justinmk/vim-dirvish'
-"エディター統一"
+"エディター統一
 Plug 'editorconfig/editorconfig-vim'
-"自動インポートとfmt"
+"自動インポートとfmt
 Plug 'mattn/vim-goimports'
 "Gitクライアント
 Plug 'tpope/vim-fugitive'
+"スニペット
+Plug 'SirVer/ultisnips'
 "カラースキーム
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/forest-night'
 call plug#end()
+
+"UltiSnips設定
+"デフォルトでtabstop移動はctrl + j と ctrl + kにマッピングされているのでコンフリクトに注意
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsEditSplit="vertical"
 
 "カラースキーム関係
 "gruvboxのコンフィグ gruvbox使うときにコメントを外す
@@ -45,7 +50,7 @@ colorscheme forest-night
 
 "close tag補完に対応する拡張子"
 let g:closetag_filenames = '*.html,*.jsx,*.tsx'
-"インデントの色"
+"インデントの色
 let g:indentLine_color_term = 65
 "Rust保存時自動整形
 let g:rustfmt_autosave = 1
@@ -120,7 +125,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set list
 set listchars=tab:>.,trail:-,eol:↲,extends:>,precedes:<,nbsp:%
 
-"保存と行末空白を削除（vim-tariling-white-spaceの効果)"
+"保存と同時にホワイトスペース整形
 nnoremap <Leader>w :w<CR> :FixWhitespace<CR>
 nnoremap <Leader>q :q<CR>
 "行末にセミコロンを挿入"
