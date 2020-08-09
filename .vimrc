@@ -30,7 +30,7 @@ call plug#end()
 
 "UltiSnips設定
 "デフォルトでtabstop移動はctrl + j と ctrl + kにマッピングされているのでコンフリクトに注意
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsEditSplit="vertical"
 
 "カラースキーム関係
