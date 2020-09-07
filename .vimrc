@@ -100,12 +100,12 @@ set wildmode=list:longest
 inoremap <silent> jj <ESC>
 
 "タブとインデント設定"
-set tabstop=4
+set tabstop=2
 set autoindent
 set expandtab
 set smartindent
 set showmatch
-set shiftwidth=4
+set shiftwidth=2
 
 "検索設定"
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
