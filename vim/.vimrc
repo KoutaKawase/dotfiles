@@ -27,17 +27,20 @@ Plug 'SirVer/ultisnips'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/forest-night'
 "LINTER"
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 "ALE関係"
 let g:ale_disable_lsp = 1
-let g:ale_linters_explicit = 1
+let g:ale_sign_column_always = 1
+let g:ale_list_window_size = 30
 let g:ale_sign_error = '😡'
 let g:ale_sign_warning = '🤔'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
 "ALE関係END"
 
 "UltiSnips設定
