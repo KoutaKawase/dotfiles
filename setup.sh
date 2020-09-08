@@ -11,3 +11,4 @@ ln -sf $HOME/work/dotfiles/bin/ide $HOME/bin/ide
 ln -sf $HOME/work/dotfiles/bin/svnd $HOME/bin/svnd
 ln -sf $HOME/work/dotfiles/coc-settings.json $HOME/.vim/coc-settings.json
 ln -sf $HOME/work/dotfiles/UltiSnips $HOME/.vim
+ln -sf $HOME/work/dotfiles/vim/ftplugin $HOME/.vim/ftplugin
