@@ -1,4 +1,5 @@
 {
+    "diagnostic.displayByAle": true,
     "typescript.format.enabled": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
 }
