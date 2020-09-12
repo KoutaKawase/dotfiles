@@ -28,12 +28,16 @@ Plug 'morhetz/gruvbox'
 Plug 'sainnhe/forest-night'
 "LINTER"
 Plug 'dense-analysis/ale'
+"Rust"
+Plug 'rust-lang/rust.vim'
 call plug#end()
+
+"Rust.vimのconfig"
+let g:rustfmt_autosave = 1
 
 "ALE関係"
 let g:ale_disable_lsp = 1
 let g:ale_sign_column_always = 1
-let g:ale_list_window_size = 30
 let g:ale_sign_error = '😡'
 let g:ale_sign_warning = '🤔'
 let g:ale_lint_on_text_changed = 'never'
@@ -67,8 +71,6 @@ colorscheme forest-night
 let g:closetag_filenames = '*.html,*.jsx,*.tsx'
 "インデントの色
 let g:indentLine_color_term = 65
-"Rust保存時自動整形
-let g:rustfmt_autosave = 1
 
 "coc関係 begin"
 " GoTo code navigation.
@@ -151,6 +153,7 @@ nmap <S-Tab>    gT
 
 syntax enable
 filetype plugin on
+filetype plugin indent on
 filetype indent on
 
 set number
