@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Downloading...."
+echo $1 | awk '{gsub("tree/master", "trunk", $1); print $1}' | xargs svn export
+
