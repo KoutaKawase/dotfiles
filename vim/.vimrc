@@ -9,6 +9,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 "TypeScript"
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "JS
