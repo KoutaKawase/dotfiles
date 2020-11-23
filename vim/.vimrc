@@ -33,6 +33,8 @@ Plug 'dense-analysis/ale'
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
+let mapleader = "\<Space>"
+
 "Rust.vimのconfig"
 let g:rustfmt_autosave = 1
 
@@ -97,9 +99,14 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 "coc関係 end"
 
-let mapleader = "\<Space>"
 "文字コードを明示的に指定"
 set fenc=utf-8
 "バックアップファイルを作らせない
@@ -142,6 +149,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "不可視文字の設定"
 set list
 set listchars=tab:>.,trail:-,eol:↲,extends:>,precedes:<,nbsp:%
+
 
 "保存と同時にホワイトスペース整形
 nnoremap <Leader>w :w<CR> :FixWhitespace<CR>
