@@ -2,5 +2,6 @@
     "diagnostic.displayByAle": true,
     "typescript.format.enabled": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-    "rust-analyzer.checkOnSave.command": "clippy"
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.server.path": "~/.local/bin/rust-analyzer"
 }

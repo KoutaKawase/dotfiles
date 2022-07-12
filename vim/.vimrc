@@ -1,7 +1,7 @@
 call plug#begin()
 "行末スペースや全角を赤色にしてくれる
 Plug 'bronson/vim-trailing-whitespace'
-"インデント可視化
+
 Plug 'yggdroot/indentline'
 "ペア自動補完
 Plug 'jiangmiao/auto-pairs'
@@ -26,7 +26,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 "カラースキーム
 Plug 'morhetz/gruvbox'
-Plug 'sainnhe/forest-night'
+Plug 'sainnhe/everforest'
 "LINTER"
 Plug 'dense-analysis/ale'
 "Rust"
@@ -60,14 +60,19 @@ let g:UltiSnipsEditSplit="vertical"
 "set background=dark
 "autocmd vimenter * colorscheme gruvbox
 
-"forest-night関係のコンフィグ
-set termguicolors
+"everforest関係のコンフィグ
+if has('termguicolors')
+  "set termguicolors
+endif
 
-let g:forest_night_enable_italic = 1
-let g:forest_night_disable_italic_comment = 1
-let g:forest_night_transparent_background = 1
+" For dark version.
+set background=dark
 
-colorscheme forest-night
+let g:everforest_background = 'soft'
+let g:everforest_enable_italic = 1
+let g:everforest_disable_italic_comment = 1
+
+colorscheme everforest
 "end forest-night config
 
 "close tag補完に対応する拡張子"
