@@ -3,6 +3,10 @@ alias ev 'vim ~/.vimrc'
 
 alias vi 'vim'
 
+alias pn 'pnpm'
+
+alias rm 'trash'
+
 alias mk 'make'
 alias gcz 'git-cz'
 
@@ -10,8 +14,6 @@ alias ll 'ls -ltr'
 alias la 'ls -la'
 
 alias mkdir 'mkdir -p'
-alias rm 'rmtrash -i'
-alias rmdir 'rmdirtrash -i'
 alias sudo 'sudo '
 alias cp 'cp -i'
 alias mv 'mv -i'
